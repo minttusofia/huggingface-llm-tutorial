@@ -5,7 +5,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=10
 #SBATCH --mem=64G
-#SBATCH --time=4:00:00
+#SBATCH --time=1:00:00
 #SBATCH --gres=gpu:v100:1
 #SBATCH -e slurm-jupyter.out
 #SBATCH -o slurm-jupyter.out
