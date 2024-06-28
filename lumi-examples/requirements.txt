@@ -1,6 +1,0 @@
-sentencepiece
-transformers
-datasets
-huggingface_hub
-trl
-accelerate

@@ -1,0 +1,3 @@
+#!/bin/bash
+# Your conda / pip install commands here ...
+# e.g., pip install datasets
