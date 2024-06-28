@@ -103,4 +103,4 @@ load_dotenv(override=True)
 ```
 - You can also modify the HuggingFace cache directory (HF_HOME) to a path of your choice in `.env`.
 
-4. Launch jupyter with ```jupyter lab``` and open the localhost link in your browser. Start from `notebook1/huggingface_intro_cpu_friendly.ipynb`.
+3. Launch jupyter with ```jupyter lab``` and open the localhost link in your browser. Start from `notebook1/huggingface_intro_cpu_friendly.ipynb`.

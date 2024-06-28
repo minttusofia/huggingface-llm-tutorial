@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --account=project_2008595
+#SBATCH --account=project_2010262
 #SBATCH --partition=small
 #SBATCH --time=02:00:00
 #SBATCH --ntasks=1
