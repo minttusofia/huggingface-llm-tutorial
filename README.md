@@ -53,9 +53,9 @@ The `llm_tutorial` conda environment should cover most use cases for HuggingFace
 For more documentation on CSC clusters, please see https://docs.csc.fi/support/tutorials/puhti_quick/, https://docs.csc.fi/support/tutorials/mahti_quick/ and https://docs.csc.fi/.
 
 ### Limiting queueing time for GPUs
-With a large cohort of us running jobs at once, wait times may arise. For the exercises requiring GPUs (notebook2), we recommend you either pair up and share one notebook with someone, check Mahti if you cannot get your GPU job scheduled on Puhti and vice versa, or otherwise, check availability on Google Colab or perhaps your university's own cluster, if applicable. Apologies for the hassle.
+With a large cohort of us running jobs at once, wait times may arise. For the exercises requiring GPUs (notebook2), we recommend you pair up and share one notebook with someone, check Mahti if you cannot get your GPU job scheduled on Puhti and vice versa, or perhaps try your university's own cluster, if applicable. Apologies for the hassle.
 
-For Wednesday's tutorial slot (2:30-5pm) and Friday's project (8am-3pm), we also have 20 GPUs reserved specifically for our CSC project. Please make use of these first and foremost if they are free, using the slurm argument `--reservation=ellis-summer-school-2024-wed` and `--reservation=ellis-summer-school-2024-fri`, respectively. Slurm arguments can be defined either directly as arguments to the `sbatch` command on the command line or in a launch script (such as `launch_jupyter_gpu_puhti.sh`).
+For Wednesday's tutorial slot (2:30-5pm) and Friday's project (8am-3pm), we also have 20 GPUs reserved on Puhti specifically for our CSC project. Please make use of these first and foremost if they are free, using the slurm argument `--reservation=ellis-summer-school-2024-wed` or `--reservation=ellis-summer-school-2024-fri`, respectively. Slurm arguments can be defined either directly as arguments to the `sbatch` command on the command line or in a launch script (such as `launch_jupyter_gpu_puhti.sh`). If all 20 are already in use and you cannot schedule your job within the reservation, leave out this argument to request a GPU in the rest of the cluster.
 
 # LLM tutorial
 ## Setup -- Running on CPU / GPU on Puhti or on a GPU on Mahti
@@ -75,7 +75,8 @@ sbatch launch_jupyter_cpu_puhti.sh
 ```
 * To cancel your jupyter instance, use, `scancel <JOBID>`, such as `scancel 3562598`.  
 
-[!IMPORTANT] Please try to not leave jobs running once you no longer need them!
+> [!IMPORTANT]
+Please try to not leave jobs running once you no longer need them!
 
 3. Find the port jupyter is using by looking at `slurm-jupyter.out`. It will be logged like this: `http://localhost:<PORT>/lab?token=<TOKEN>`. Run the following on your **local machine** to set up ssh port forwarding to connect to your instance:
 ```bash
