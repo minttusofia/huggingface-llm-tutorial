@@ -23,7 +23,7 @@ Host mahti
     User <YOUR_CSC_USERNAME>
     HostName mahti.csc.fi
 ```
-4. Connect to Puhti using `ssh puhti` or Mahti using `ssh mahti`.
+4. Connect to Puhti using `ssh puhti` or Mahti using `ssh mahti`. It may take up to 20 minutes for your ssh key to sync to the clusters; if you are being asked for a password when trying to connect via ssh, the key has not yet synced. 
 
 <br>
 
@@ -33,7 +33,7 @@ Host mahti
 
 
 ### Scheduling jobs
-Computation should not be done on the login nodes, so please do not run python, jupyter, etc. there. Puhti and Mahti use Slurm to schedule jobs on the compute nodes.
+Computation should not be done on the login nodes, so please do not run python, jupyter, etc. there. Puhti and Mahti use [Slurm](https://docs.csc.fi/computing/running/submitting-jobs/) to schedule jobs on the compute nodes.
 If you won't need GPUs for your small-scale experimental job, please use either your local machine, or Puhti. Mahti is best suited for either GPU jobs or large-scale CPU jobs.
 
 ### Disk space on CSC clusters
